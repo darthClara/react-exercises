@@ -7,8 +7,10 @@ export default class App extends React.Component {
         return (
             <div>
                 <Hello/>
-                <Welcome name="Clara"/>
+                <Welcome/>
             </div>
         )
     }
 }
+
+Welcome.defaultProps={name: "utente anonimo"};
