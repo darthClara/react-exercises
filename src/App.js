@@ -13,4 +13,4 @@ export default class App extends React.Component {
     }
 }
 
-Welcome.defaultProps={name: "utente anonimo"};
+Welcome.defaultProps={name: <strong>utente anonimo</strong>};
