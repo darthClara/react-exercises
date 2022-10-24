@@ -5,14 +5,14 @@ export default class Counter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            numero: 0,
+            numero: props.numeroIniziale
         };
     }
 
     componentDidMount() {
         this.timer = setInterval(
           () => this.scattoNumero(),
-          1000
+          this.props.intervallo
         );
       }
 
@@ -22,7 +22,7 @@ export default class Counter extends React.Component {
 
       scattoNumero() {
         this.setState({
-            numero: this.state.numero + 1,
+            numero: this.state.numero + this.props.incremento,
         });
       }
 

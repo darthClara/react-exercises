@@ -9,7 +9,7 @@ export default class App extends React.Component {
             <div>
                 <Hello/>
                 <Welcome name="John" age={15}/>
-                <Counter/>
+                <Counter numeroIniziale={0} intervallo={1000} incremento={1}/>
             </div>
         )
     }
