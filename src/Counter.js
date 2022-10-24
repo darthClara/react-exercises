@@ -2,17 +2,16 @@ import React from "react";
 import CounterDisplay from "./CounterDisplay";
 
 export default class Counter extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            numero: props.numeroIniziale
-        };
-    }
+    
+    state = {
+        numero: this.props.numeroIniziale,
+    };
 
     componentDidMount() {
         this.timer = setInterval(
-          () => this.scattoNumero(),
+          () => this.setState({
+            numero: this.state.numero + this.props.incremento,
+        }),
           this.props.intervallo
         );
       }
@@ -21,11 +20,6 @@ export default class Counter extends React.Component {
         clearInterval(this.timer);
       }
 
-      scattoNumero() {
-        this.setState({
-            numero: this.state.numero + this.props.incremento,
-        });
-      }
 
     render() {
         return (
