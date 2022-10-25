@@ -1,7 +1,7 @@
 import React from "react";
-import Hello from "./Hello";
-import Welcome from "./Welcome";
-import Counter from "./Counter";
+import Hello from "./BasicConcepts/Hello"
+import Welcome from "./BasicConcepts/Welcome";
+import Counter from "./BasicConcepts/Counter";
 import ClickCounter from "./FormsListsAndStyling/ClickCounter";
 
 export default class App extends React.Component {
