@@ -2,7 +2,6 @@ import React from "react";
 import Hello from "./Hello";
 import Welcome from "./Welcome";
 import Counter from "./Counter";
-import ClickCounter from "./FormsListsAndStyling/ClickCounter";
 
 export default class App extends React.Component {
     render() {
@@ -17,7 +16,6 @@ export default class App extends React.Component {
                 <hr/>
                 <h2>Forms, lists, and styling</h2>
                 <hr/>
-                <ClickCounter/>
             </div>
         )
     }
