@@ -10,8 +10,12 @@ export default class Login extends React.Component {
 
     handleClick = () => {
         if (this.state.pass && this.state.username) {
-            this.props.onLogin(this.state);
+            this.onLogin(this.state);
         } else {console.log("Inserisci il campo username e password")}
+    }
+
+    onLogin = () => {
+        console.log(this.state)
     }
 
     handleChange = (e) => {
@@ -39,8 +43,6 @@ export default class Login extends React.Component {
             })
         }
     }
-
-   
 
     render() {
         return (
