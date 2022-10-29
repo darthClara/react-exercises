@@ -13,15 +13,11 @@ export default class App extends React.Component {
     render() {
         return (
             <div>
-                <hr/>
                 <h2 style={{textAlign: "center", fontSize: "30px"}}>Basic concepts</h2>
-                <hr/>
                 <Hello/>
                 <Welcome name="John" age={15}/>
                 <Counter numeroIniziale={0} intervallo={1000} incremento={1}/>
-                <hr/>
-                <h2 style={{textAlign: "center", fontSize: "30px"}}>Forms, lists, and styling</h2>
-                <hr/>
+                <h2 style={{textAlign: "center", fontSize: "30px"}}>Forms, lists, and styling</h2>         
                 <ClickCounter/>
                 <ClickTracker/>
                 <InteractiveWelcome/>

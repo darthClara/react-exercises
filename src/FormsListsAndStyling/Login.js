@@ -6,13 +6,15 @@ export default class Login extends React.Component {
         remember: "false",
         pass: "",
         username: "",
+        log: "logoff"
     }
 
     handleClick = () => {
 
-        if (this.state.pass && this.state.username) {
+        if (this.state.pass && this.state.username && this.state.pass.length >= 8) {
             this.onLogin(this.state);
-        } else {console.log("Inserisci il campo username e password")}
+
+        } else {console.log("Inserisci il campo username e una password lunga almeno 8 caratteri")}
     }
 
     onLogin = () => {
@@ -39,26 +41,31 @@ export default class Login extends React.Component {
                 username: value
             })
         }
-        else if (name === "pass") {
+        else if ((name === "pass") && (value.length >= 8)) {
             this.setState({
-                pass: value
+                pass: value,
+                log: "logon",
+            })
+        }
+        else if ((name === "pass") && (value.length <= 8)) {
+            this.setState({
+                pass: "",
+                log: "logoff",
             })
         }
     }
 
     render() {
         return (
-            <form style={{ border: "1px solid black", margin: "20px 0px 20px 0px" }}>
-                <input type="text" className="formsElements" name="username" value={this.state.value} onChange={this.handleChange}/>
-                <span> Username</span>
+            <form>
+                <input placeholder="Username" type="text" className="formsElements" name="username" value={this.state.value} onChange={this.handleChange}/>
                 <br />
-                <input type="password" className="formsElements" name="pass" value={this.state.value} onChange={this.handleChange}/>
-                <span> Password</span>
+                <input placeholder="Password" type="password" className="formsElements" name="pass" value={this.state.value} onChange={this.handleChange}/>
                 <br />
                 <input type="checkbox" className="formsElements" name="remember" value={this.state.remember} onChange={this.handleChange}/>
                 <span> Remember</span>
                 <br />
-                <input type="button" name="login" value="LOGIN" onClick={this.handleClick}/>
+                <input type="button" id={this.state.log} name="login" value="LOGIN" onClick={this.handleClick}/>
                 <input type="reset" name="reset" value="RESET" onClick={this.handleChange}/>
             </form>
         )

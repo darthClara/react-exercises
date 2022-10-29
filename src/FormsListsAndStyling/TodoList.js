@@ -40,7 +40,7 @@ export default class TodoList extends React.Component {
 
   render() {
     return (
-      <div style={{ border: "1px solid black", margin: "20px 0px 20px 0px" }}>
+      <div>
         <h3>LISTA:</h3>
         <ul id="unorderedList">
           {this.state.items.map((li) => (
