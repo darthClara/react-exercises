@@ -1,0 +1,36 @@
+* {
+    font-family: fantasy;
+    padding: 10px;
+}
+
+button, input, div, form {
+    border-radius: 5px;
+}
+
+div {
+    border: 4px solid rgb(2, 72, 16);
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(13, 255, 0);
+    border: 4px solid rgb(2, 72, 16);
+}
+
+#logoff {
+    background-color: red;
+}
+
+#logon {
+    background-color: greenyellow;
+}
+
+.backgroundWhite {
+    background-color: white;
+}
+
+.borderRed {
+    border: 3px solid red;
+}
