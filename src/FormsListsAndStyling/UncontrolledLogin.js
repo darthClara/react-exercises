@@ -5,7 +5,7 @@ export default class UncontrolledLogin extends React.Component {
     render() {
         return (
             <form style={{ border: "1px solid black", margin: "20px 0px 20px 0px" }}>
-                <input type="text" placeholder="Username" required />
+                <input type="text" placeholder="Username" autoFocus required />
                 <br />
                 <input type="password" placeholder="Password" required />
                 <br />
