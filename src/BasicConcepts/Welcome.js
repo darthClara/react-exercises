@@ -5,7 +5,7 @@ export default class Welcome extends React.Component {
 
     render() {
         return (
-            <div style={{border: "1px solid black", margin: "20px 0px 20px 0px"}}>
+            <div className="welcome">
                 <p>
                     Welcome, {this.props.name}!
                 </p>
