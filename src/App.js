@@ -6,6 +6,7 @@ import ClickCounter from "./FormsListsAndStyling/ClickCounter";
 import ClickTracker from "./FormsListsAndStyling/ClickTracker";
 import InteractiveWelcome from "./FormsListsAndStyling/InteractiveWelcome";
 import Login from "./FormsListsAndStyling/Login";
+import UncontrolledLogin from "./FormsListsAndStyling/UncontrolledLogin";
 
 export default class App extends React.Component {
     render() {
@@ -23,7 +24,8 @@ export default class App extends React.Component {
                 <ClickCounter/>
                 <ClickTracker/>
                 <InteractiveWelcome/>
-                <Login />
+                <Login/>
+                <UncontrolledLogin/>
             </div>
         )
     }
