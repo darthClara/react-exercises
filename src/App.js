@@ -26,7 +26,7 @@ export default class App extends React.Component {
                 <UncontrolledLogin/>
                 <TodoList/>
                 <h2 style={{textAlign: "center", fontSize: "30px"}}>Composition</h2>         
-                <Container/>
+                <Container title="Gattini"/>
             </div>
         )
     }
