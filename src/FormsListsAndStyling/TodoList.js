@@ -32,13 +32,19 @@ export default class TodoList extends React.Component {
       }
   };
 
+  removeHandler = (e) => {
+    e.preventDefault();
+    const item = (e.target).parentElement;
+    item.remove();
+  }
+
   render() {
     return (
       <div style={{ border: "1px solid black", margin: "20px 0px 20px 0px" }}>
         <h3>LISTA:</h3>
         <ul id="unorderedList">
           {this.state.items.map((li) => (
-            <li>{li}</li>
+            <li><input type="button" value="X" onClick={this.removeHandler}/>{li}</li>
           ))}
         </ul>
         <input
