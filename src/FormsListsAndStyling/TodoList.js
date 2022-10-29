@@ -1,33 +1,42 @@
 import React from "react";
 
 export default class TodoList extends React.Component {
-
   state = {
     items: ["uno", "due"],
-    newitems: ""
+    newitems: "",
   };
 
   inputHandler = (e) => {
     const valore = e.target.value;
     this.setState({
-        newitems: valore
-    })
-    };
+      newitems: valore,
+    });
+  };
 
-    clickHandler = () => {
-        if(this.state.newitems) {
-            this.setState({
-                items: this.state.items.concat([this.state.newitems]),
-            });
-            this.refs.listItem.value="";
-        } else {alert("insert a new item")}
-    };
+  clickHandler = () => {
+    if (this.state.newitems) {
+      this.setState({
+        items: this.state.items.concat([this.state.newitems]),
+      });
+      this.refs.listItem.value = "";
+    } else {
+      alert("insert a new item");
+    }
+  };
+
+  resetHandler = () => {
+    this.refs.listItem.value = "";
+    const unorderedList = document.getElementById("unorderedList");
+    while (unorderedList.hasChildNodes()) {
+        unorderedList.removeChild(unorderedList.firstChild);
+      }
+  };
 
   render() {
     return (
       <div style={{ border: "1px solid black", margin: "20px 0px 20px 0px" }}>
         <h3>LISTA:</h3>
-        <ul>
+        <ul id="unorderedList">
           {this.state.items.map((li) => (
             <li>{li}</li>
           ))}
@@ -38,7 +47,8 @@ export default class TodoList extends React.Component {
           type="text"
           onChange={this.inputHandler}
         />
-        <input type="button" value="ADD" onClick={this.clickHandler}/>
+        <input type="button" value="ADD" onClick={this.clickHandler} />
+        <input type="button" value="RESET" onClick={this.resetHandler} />
       </div>
     );
   }
