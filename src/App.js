@@ -9,6 +9,7 @@ import Login from "./FormsListsAndStyling/Login";
 import UncontrolledLogin from "./FormsListsAndStyling/UncontrolledLogin";
 import TodoList from "./FormsListsAndStyling/TodoList";
 import Container from "./Components/Container";
+import { Language } from "./Components/Language";
 
 export default class App extends React.Component {
     render() {
@@ -36,6 +37,7 @@ export default class App extends React.Component {
                 }/>
                 <h2 style={{textAlign: "center", fontSize: "30px"}}>Composition</h2>         
                 <Container title="Gattini"/>
+                <Language />
             </div>
         )
     }

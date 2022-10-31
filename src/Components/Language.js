@@ -1,16 +1,27 @@
 import React, { createContext } from "react";
-import DisplayLanguage from "./DisplayLanguage";
+import { DisplayLanguage } from "./DisplayLanguage";
 
 export const LanguageContext = createContext("en")
 
-export default class Language {
+export class Language extends React.Component{
+
+    state = {
+        language: "en",
+    }
+
+    handleLanguage = (e) => {
+        this.setState({
+           language: e.target.value
+        }) 
+    }
+
     render() {
         return(
-            <div>
-                <LanguageContext.Provider>
+            <>
+                <LanguageContext.Provider value={this.state.language}>
                     <DisplayLanguage />
                 </LanguageContext.Provider>
-                <select>
+                <select value={this.state.language} onChange={this.handleLanguage}>
                     <option value="en">
                         English
                     </option>
@@ -18,7 +29,7 @@ export default class Language {
                         Italiano
                     </option>
                 </select>
-            </div>
+            </>
         )
     }
 }
