@@ -12,6 +12,11 @@ import Container from "./Components/Container";
 
 export default class App extends React.Component {
     render() {
+
+        // {this.state.items.map((li) => (
+        //     <li><input type="button" value="X" onClick={this.removeHandler}/>{li}</li>
+        //   ))}
+
         return (
             <div>
                 <h2 style={{textAlign: "center", fontSize: "30px"}}>Basic concepts</h2>
@@ -24,7 +29,11 @@ export default class App extends React.Component {
                 <InteractiveWelcome/>
                 <Login/>
                 <UncontrolledLogin/>
-                <TodoList/>
+                <TodoList render={(items, removeHandler) =>
+                     { return (items.map((item, index) => (
+                        <li key={index}><input key={index} type="button" value="X" onClick={removeHandler}/>{item}</li>
+                      )))}
+                }/>
                 <h2 style={{textAlign: "center", fontSize: "30px"}}>Composition</h2>         
                 <Container title="Gattini"/>
             </div>

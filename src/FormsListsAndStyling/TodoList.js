@@ -43,9 +43,7 @@ export default class TodoList extends React.Component {
       <div>
         <h3>LISTA:</h3>
         <ul id="unorderedList">
-          {this.state.items.map((li) => (
-            <li><input type="button" value="X" onClick={this.removeHandler}/>{li}</li>
-          ))}
+            {this.props.render(this.state.items, this.removeHandler)}
         </ul>
         <input
           ref="listItem"
