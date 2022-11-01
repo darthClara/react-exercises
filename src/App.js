@@ -40,7 +40,8 @@ export default class App extends React.Component {
                 <Container title="Gattini"/>
                 <Language />
                 <h2 style={{textAlign: "center", fontSize: "30px"}}>Function components and hooks</h2>
-                <Sum numeri={[10, 5, 10]}/>
+                {/* <Sum numeri={[10, 5, 10]}/> */}
+                <Sum />
             </div>
         )
     }

@@ -9,3 +9,7 @@ export default function Sum(props) {
 
   return <h1>risultato: {total}</h1>
 }
+
+Sum.defaultProps = {
+    numeri: [3, 4, 2]
+  }
