@@ -10,6 +10,7 @@ import UncontrolledLogin from "./FormsListsAndStyling/UncontrolledLogin";
 import TodoList from "./FormsListsAndStyling/TodoList";
 import Container from "./Components/Container";
 import { Language } from "./Components/Language";
+import Sum from "./FunctionComponentsAndHooks/Sum";
 
 export default class App extends React.Component {
     render() {
@@ -38,6 +39,8 @@ export default class App extends React.Component {
                 <h2 style={{textAlign: "center", fontSize: "30px"}}>Composition</h2>         
                 <Container title="Gattini"/>
                 <Language />
+                <h2 style={{textAlign: "center", fontSize: "30px"}}>Function components and hooks</h2>
+                <Sum numeri={[10, 5, 10]}/>
             </div>
         )
     }
