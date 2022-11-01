@@ -26,3 +26,11 @@ div {
 #logon {
     background-color: greenyellow;
 }
+
+.backgroundWhite {
+    background-color: white;
+}
+
+.borderRed {
+    border: 3px solid red;
+}
