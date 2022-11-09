@@ -25,7 +25,7 @@ export default function GithubUserList() {
         <button onClick={handleClick}>TROVA L'UTENTE</button>
       </div>
       <div>
-        {Array.map((user, index) => (
+        {array.map((user, index) => (
             <GithubUser username={user} key={index}/>
         ))}
       </div>

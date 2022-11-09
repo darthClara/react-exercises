@@ -11,7 +11,8 @@ import TodoList from "./FormsListsAndStyling/TodoList";
 import Container from "./Components/Container";
 import { Language } from "./Components/Language";
 import Sum from "./FunctionComponentsAndHooks/Sum";
-import { GithubUser } from "./FunctionComponentsAndHooks/GithubUser";
+// import { GithubUser } from "./FunctionComponentsAndHooks/GithubUser";
+import GithubUserList from "./FunctionComponentsAndHooks/GithubUserList";
 
 export default class App extends React.Component {
     render() {
@@ -43,7 +44,8 @@ export default class App extends React.Component {
                 <h2 style={{textAlign: "center", fontSize: "30px"}}>Function components and hooks</h2>
                 {/* <Sum numeri={[10, 5, 10]}/> */}
                 <Sum />
-                <GithubUser username="AlexRicci93"/>
+                {/* <GithubUser username="AlexRicci93"/> */}
+                <GithubUserList/>
             </div>
         )
     }
