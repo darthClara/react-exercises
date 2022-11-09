@@ -1,4 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+export default function ClickCounter(props) {
+
+    const [numero, setNumero] = useState(0);
+
+    
+    useEffect(() => {
+        props.onCounterChange(numero)
+        }, [numero, props]);
+        
+    function handleClick() {
+        setNumero(numero + 1)
+    };
+
+        return (
+            <div>
+                <h1>Clicker counter: {numero}</h1>
+                <button onClick={handleClick}>INCREMENTA</button>
+            </div>
+        )
+}
+
 
 // export default class ClickCounter extends React.Component {
 
@@ -21,29 +43,3 @@ import React, { useState } from "react";
 //         )
 //     }
 // }
-
-export default function ClickCounter() {
-
-    // state = {
-    //     numero: 0
-    // }
-
-    // handleClick = () => {
-    //     setState({
-    //         numero: state.numero + 1
-    //     })
-    // }
-
-    const [numero, setNumero] = useState(0);
-
-    function handleClick() {
-        setNumero(numero + 1)
-    }
-
-        return (
-            <div>
-                <h1>Clicker counter: {numero}</h1>
-                <button onClick={handleClick}>INCREMENTA</button>
-            </div>
-        )
-}
