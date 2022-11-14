@@ -13,9 +13,11 @@ import { Language } from "./Components/Language";
 import Sum from "./FunctionComponentsAndHooks/Sum";
 // import { GithubUser } from "./FunctionComponentsAndHooks/GithubUser";
 import GithubUserList from "./FunctionComponentsAndHooks/GithubUserList";
+import useCounter from "./FunctionComponentsAndHooks/useCounter";
 
-export default class App extends React.Component {
-    render() {
+export default function App() {
+
+        const {contatore, incrementa} = useCounter(3)
 
         // {this.state.items.map((li) => (
         //     <li><input type="button" value="X" onClick={this.removeHandler}/>{li}</li>
@@ -46,9 +48,9 @@ export default class App extends React.Component {
                 <Sum />
                 {/* <GithubUser username="AlexRicci93"/> */}
                 <GithubUserList/>
+                <button onClick={incrementa}>{contatore}</button>
             </div>
         )
-    }
 }
 
 Welcome.defaultProps={name: <strong>utente anonimo</strong>};
