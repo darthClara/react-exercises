@@ -1,46 +1,8 @@
 import React, { useState } from "react"
+import useLogin from "../FunctionComponentsAndHooks/useLogin"
 
 export default function Login() {
-  const [remember, setRemember] = useState("false")
-  const [pass, setPass] = useState("")
-  const [username, setUsername] = useState("")
-  const [log, setLog] = useState("logoff")
-
-  function handleClick() {
-    if (pass && username && pass.length >= 8) {
-      console.log(username, pass, remember)
-      setPass("")
-      setLog("logoff")
-      setUsername("")
-    } else {
-      console.log(
-        "Inserisci il campo username e una password lunga almeno 8 caratteri"
-      )
-    }
-  }
-
-  function handleChange(e) {
-    const value = e.target.value
-    const name = e.target.name
-
-    if (value === "true") {
-      setRemember("false")
-    } else if (value === "false") {
-      setRemember("true")
-    } else if (name === "username") {
-      setUsername(value)
-    } else if (name === "pass" && value.length >= 8) {
-      setPass(value)
-      setLog("logon")
-    } else if (name === "pass" && value.length <= 8) {
-      setPass(value)
-      setLog("logoff")
-    } else if (name === "reset") {
-      setPass("")
-      setLog("logoff")
-      setUsername("")
-    }
-  }
+  const { handleClick, handleChange, username, pass, remember, log } = useLogin()
 
   return (
     <form>
