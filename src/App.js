@@ -14,6 +14,7 @@ import Sum from "./FunctionComponentsAndHooks/Sum";
 // import { GithubUser } from "./FunctionComponentsAndHooks/GithubUser";
 import GithubUserList from "./FunctionComponentsAndHooks/GithubUserList";
 import useCounter from "./FunctionComponentsAndHooks/useCounter";
+import CarDetails from "./FunctionComponentsAndHooks/CarDetails";
 
 export default function App() {
 
@@ -49,6 +50,7 @@ export default function App() {
                 {/* <GithubUser username="AlexRicci93"/> */}
                 <GithubUserList/>
                 <button onClick={incrementa}>{contatore}</button>
+                <CarDetails initialData={{model: "minicooper", color: "black", year: "2004" }}/>
             </div>
         )
 }
