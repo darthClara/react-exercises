@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Language, LanguageContext } from "./Language";
 
 const Translation = {
@@ -10,8 +10,8 @@ const Translation = {
     }
 }
 
-export class DisplayLanguage extends React.Component{
-    render() {
+export default function DisplayLanguage() {
+    const language = useContext(LanguageContext)
         return(
             <>
                 <LanguageContext.Consumer>
@@ -24,4 +24,3 @@ export class DisplayLanguage extends React.Component{
             </>
         )
     }
-}

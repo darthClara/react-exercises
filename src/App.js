@@ -9,7 +9,7 @@ import Login from "./FormsListsAndStyling/Login";
 import UncontrolledLogin from "./FormsListsAndStyling/UncontrolledLogin";
 import TodoList from "./FormsListsAndStyling/TodoList";
 import Container from "./Components/Container";
-import { Language } from "./Components/Language";
+import Language from "./Components/Language";
 import Sum from "./FunctionComponentsAndHooks/Sum";
 // import { GithubUser } from "./FunctionComponentsAndHooks/GithubUser";
 import GithubUserList from "./FunctionComponentsAndHooks/GithubUserList";
